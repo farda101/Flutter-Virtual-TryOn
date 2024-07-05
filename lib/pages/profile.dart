@@ -33,97 +33,13 @@ class Profile extends StatelessWidget {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                margin: EdgeInsets.fromLTRB(0, 2.6, 6, 2.4),
-                                width: 11,
-                                height: 11,
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    image: DecorationImage(
-                                      fit: BoxFit.contain,
-                                      image: AssetImage(
-                                        'assets/images/signal.png',
-                                      ),
-                                    ),
-                                  ),
-                                  child: Container(
-                                    width: 11,
-                                    height: 11,
-                                  ),
-                                ),
-                              ),
-                              Text(
-                                '6:26',
-                                style: GoogleFonts.getFont(
-                                  'Roboto',
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 13.3,
-                                  color: Color(0xFF000000),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          margin: EdgeInsets.fromLTRB(0, 0, 0, 1),
-                          child: SizedBox(
-                            width: 71,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Container(
-                                  margin: EdgeInsets.fromLTRB(0, 2.1, 5.4, 2.4),
-                                  child: SizedBox(
-                                    width: 7.1,
-                                    height: 11.6,
-                                    child: SvgPicture.asset(
-                                      'assets/vectors/vector_65_x2.svg',
-                                    ),
-                                  ),
-                                ),
-                                Container(
-                                  margin: EdgeInsets.fromLTRB(0, 2.9, 5.8, 2.5),
-                                  child: SizedBox(
-                                    width: 8.7,
-                                    height: 10.6,
-                                    child: SvgPicture.asset(
-                                      'assets/vectors/component_113_x2.svg',
-                                    ),
-                                  ),
-                                ),
-                                Container(
-                                  margin: EdgeInsets.fromLTRB(0, 0, 5.9, 0),
-                                  child: SizedBox(
-                                    width: 16.1,
-                                    height: 16.1,
-                                    child: SvgPicture.asset(
-                                      'assets/vectors/wifi_18_x2.svg',
-                                    ),
-                                  ),
-                                ),
-                                Container(
-                                  margin: EdgeInsets.fromLTRB(0, 3.1, 0, 3.5),
-                                  width: 22,
-                                  height: 9.5,
-                                  child: SizedBox(
-                                    width: 22,
-                                    height: 9.5,
-                                    child: SvgPicture.asset(
-                                      'assets/vectors/vector_44_x2.svg',
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
                           ),
                         ),
                       ],
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.fromLTRB(0, 0, 0, 55),
+                    margin: EdgeInsets.fromLTRB(0, 20, 0, 55),
                     child: ClipRect(
                       child: BackdropFilter(
                         filter: ImageFilter.blur(
@@ -146,7 +62,7 @@ class Profile extends StatelessWidget {
                                   height: 23.3,
                                   child: GestureDetector(
                                     onTap: () {
-                                      Navigator.pushNamed(context, '/beranda');
+                                      Navigator.pushNamed(context, '/deteksi');
                                     },
                                     child: SizedBox(
                                       width: 13.7,
@@ -158,7 +74,7 @@ class Profile extends StatelessWidget {
                                   ),
                                 ),
                                 Container(
-                                  margin: EdgeInsets.fromLTRB(0, 3.7, 150, 0.7),
+                                  margin: EdgeInsets.fromLTRB(0, 3.7, 165, 0.7),
                                   child: Text(
                                     'Profile',
                                     style: GoogleFonts.getFont(
@@ -219,6 +135,7 @@ class Profile extends StatelessWidget {
                                       'assets/images/compact_camera.png',
                                     ),
                                   ),
+                                  borderRadius: BorderRadius.circular(50),
                                 ),
                                 child: Container(
                                   width: 23.2,
@@ -232,7 +149,7 @@ class Profile extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.fromLTRB(0, 0, 230.4, 22),
+                    margin: EdgeInsets.fromLTRB(0, 0, 230.4, 5),
                     child: Text(
                       'Full Name',
                       style: GoogleFonts.getFont(
@@ -244,19 +161,32 @@ class Profile extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.fromLTRB(0, 0, 150.4, 32),
-                    child: Text(
-                      'DMITRIEV ABRAHAM',
-                      style: GoogleFonts.getFont(
-                        'Inter',
-                        fontWeight: FontWeight.w600,
-                        fontSize: 13,
-                        color: Color(0xFF000000),
+                    margin: EdgeInsets.fromLTRB(0, 0, 0, 20),
+                    width: 330, // Adjust the width
+                    height: 50, // Adjust the height
+                    decoration: BoxDecoration(
+                      color: Color(0x26B1B2B7),
+                      borderRadius: BorderRadius.circular(50),
+                    ),
+                    padding: EdgeInsets.all(8),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Padding(
+                        padding: EdgeInsets.only(left: 16), // Adjust the left padding
+                        child: Text(
+                          'DMITRIEV ABRAHAM',
+                          style: GoogleFonts.getFont(
+                            'Inter',
+                            fontWeight: FontWeight.w600,
+                            fontSize: 13,
+                            color: Color(0xFF000000),
+                          ),
+                        ),
                       ),
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.fromLTRB(0, 0, 252.2, 22),
+                    margin: EdgeInsets.fromLTRB(0, 0, 252.2, 5),
                     child: Text(
                       'Email',
                       style: GoogleFonts.getFont(
@@ -268,53 +198,28 @@ class Profile extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.fromLTRB(0, 0, 148.2, 32),
-                    child: Text(
-                      'abesteg0@gmail.com',
-                      style: GoogleFonts.getFont(
-                        'Inter',
-                        fontWeight: FontWeight.w600,
-                        fontSize: 13,
-                        decoration: TextDecoration.underline,
-                        color: Color(0xFF000000),
-                        decorationColor: Color(0xFF000000),
-                      ),
+                    margin: EdgeInsets.fromLTRB(0, 0, 0, 40),
+                    width: 330, // Adjust the width
+                    height: 50, // Adjust the height
+                    decoration: BoxDecoration(
+                      color: Color(0x26B1B2B7),
+                      borderRadius: BorderRadius.circular(50),
                     ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.fromLTRB(0, 0, 242.5, 7),
-                    child: Text(
-                      'Gender',
-                      style: GoogleFonts.getFont(
-                        'Inter',
-                        fontWeight: FontWeight.w600,
-                        fontSize: 13,
-                        color: Color(0xFF000000),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.fromLTRB(20, 0, 22, 56),
-                    // decoration: BoxDecoration(
-                    //   borderRadius: BorderRadius.circular(50),
-                    //   color: Color(0x26B1B2B7),
-                    //   boxShadow: [
-                    //     BoxShadow(
-                    //       color: Color(0x26000000),
-                    //       offset: Offset(0, 4),
-                    //       blurRadius: 2,
-                    //     ),
-                    //   ],
-                    // ),
-                    child: Container(
-                      padding: EdgeInsets.fromLTRB(0, 15, 213, 0),
-                      child: Text(
-                        'Laki-laki',
-                        style: GoogleFonts.getFont(
-                          'Inter',
-                          fontWeight: FontWeight.w600,
-                          fontSize: 13,
-                          color: Color(0xFF000000),
+                    padding: EdgeInsets.all(8),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Padding(
+                        padding: EdgeInsets.only(left: 16), // Adjust the left padding
+                        child: Text(
+                          'abesteg0@gmail.com',
+                          style: GoogleFonts.getFont(
+                            'Inter',
+                            fontWeight: FontWeight.w600,
+                            fontSize: 13,
+                            decoration: TextDecoration.underline,
+                            color: Color(0xFF000000),
+                            decorationColor: Color(0xFF000000),
+                          ),
                         ),
                       ),
                     ),
@@ -332,7 +237,7 @@ class Profile extends StatelessWidget {
                                 Navigator.pushNamed(context, '/editprofile');
                               },
                               child: Container(
-                                margin: EdgeInsets.fromLTRB(1, 0, 0, 10),
+                                margin: EdgeInsets.fromLTRB(1, 3, 0, 10),
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(50),
                                   color: Color(0xFFDAEAF1),
@@ -346,7 +251,7 @@ class Profile extends StatelessWidget {
                                 ),
                                 child: Container(
                                   width: 106,
-                                  padding: EdgeInsets.fromLTRB(44, 12, 10, 17),
+                                  padding: EdgeInsets.fromLTRB(45, 12, 10, 17),
                                   child: Text(
                                     'Edit',
                                     style: GoogleFonts.getFont(
@@ -395,72 +300,6 @@ class Profile extends StatelessWidget {
                         ),
                       )),
                 ],
-              ),
-            ),
-            Positioned(
-              left: 19,
-              right: 19,
-              bottom: 353,
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(50),
-                  color: Color(0x26B1B2B7),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Color(0x26000000),
-                      offset: Offset(0, 4),
-                      blurRadius: 2,
-                    ),
-                  ],
-                ),
-                child: Container(
-                  width: 297,
-                  height: 46,
-                ),
-              ),
-            ),
-            Positioned(
-              left: 19,
-              right: 19,
-              bottom: 273,
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(50),
-                  color: Color(0x26B1B2B7),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Color(0x26000000),
-                      offset: Offset(0, 4),
-                      blurRadius: 2,
-                    ),
-                  ],
-                ),
-                child: Container(
-                  width: 297,
-                  height: 46,
-                ),
-              ),
-            ),
-            Positioned(
-              left: 19,
-              right: 19,
-              bottom: 193,
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(50),
-                  color: Color(0x26B1B2B7),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Color(0x26000000),
-                      offset: Offset(0, 4),
-                      blurRadius: 2,
-                    ),
-                  ],
-                ),
-                child: Container(
-                  width: 297,
-                  height: 46,
-                ),
               ),
             ),
           ],

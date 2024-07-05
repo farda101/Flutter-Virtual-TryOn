@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/api/service.dart';
-import 'package:flutter_app/pages/home.dart';
+import 'package:flutter_app/pages/detection.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
@@ -38,7 +38,7 @@ class _SignInState extends State<SignIn> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Home()),
+                  MaterialPageRoute(builder: (context) => Detection()),
                 );
               },
               child: Text('OK'),
@@ -219,7 +219,7 @@ class _SignInState extends State<SignIn> {
                                 ),
                                 shadowColor: Color(0x26000000),
                                 elevation: 4,
-                                padding: EdgeInsets.symmetric(vertical: 13, horizontal: 90),
+                                padding: EdgeInsets.symmetric(vertical: 13, horizontal: 80),
                               ),
                               child: Text(
                                 'Sign In',
@@ -242,7 +242,7 @@ class _SignInState extends State<SignIn> {
                                 ),
                                 shadowColor: Color(0x26000000),
                                 elevation: 4,
-                                padding: EdgeInsets.symmetric(vertical: 7, horizontal: 44),
+                                padding: EdgeInsets.symmetric(vertical: 7, horizontal: 95),
                               ),
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.start,

@@ -59,90 +59,6 @@ class LandingPage extends StatelessWidget {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                margin: EdgeInsets.fromLTRB(0, 2.6, 6, 2.4),
-                                width: 11,
-                                height: 11,
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    image: DecorationImage(
-                                      fit: BoxFit.contain,
-                                      image: AssetImage(
-                                        'assets/images/signal.png',
-                                      ),
-                                    ),
-                                  ),
-                                  child: Container(
-                                    width: 11,
-                                    height: 11,
-                                  ),
-                                ),
-                              ),
-                              Text(
-                                '6:26',
-                                style: GoogleFonts.getFont(
-                                  'Roboto',
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 13.3,
-                                  color: Color(0xFF000000),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          margin: EdgeInsets.fromLTRB(0, 0, 0, 1),
-                          child: SizedBox(
-                            width: 71,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Container(
-                                  margin: EdgeInsets.fromLTRB(0, 2.1, 5.4, 2.4),
-                                  child: SizedBox(
-                                    width: 7.1,
-                                    height: 11.6,
-                                    child: SvgPicture.asset(
-                                      'assets/vectors/vector_73_x2.svg',
-                                    ),
-                                  ),
-                                ),
-                                Container(
-                                  margin: EdgeInsets.fromLTRB(0, 2.9, 5.8, 2.5),
-                                  child: SizedBox(
-                                    width: 8.7,
-                                    height: 10.6,
-                                    child: SvgPicture.asset(
-                                      'assets/vectors/component_15_x2.svg',
-                                    ),
-                                  ),
-                                ),
-                                Container(
-                                  margin: EdgeInsets.fromLTRB(0, 0, 5.9, 0),
-                                  child: SizedBox(
-                                    width: 16.1,
-                                    height: 16.1,
-                                    child: SvgPicture.asset(
-                                      'assets/vectors/wifi_20_x2.svg',
-                                    ),
-                                  ),
-                                ),
-                                Container(
-                                  margin: EdgeInsets.fromLTRB(0, 3.1, 0, 3.5),
-                                  width: 22,
-                                  height: 9.5,
-                                  child: SizedBox(
-                                    width: 22,
-                                    height: 9.5,
-                                    child: SvgPicture.asset(
-                                      'assets/vectors/vector_16_x2.svg',
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
                           ),
                         ),
                       ],
@@ -157,7 +73,7 @@ class LandingPage extends StatelessWidget {
                       );
                     },
                     child: Container(
-                      margin: EdgeInsets.fromLTRB(1, 0, 0, 0),
+                      margin: EdgeInsets.fromLTRB(1, 20, 0, 0),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
                         color: Color(0xFFFFC6AC),

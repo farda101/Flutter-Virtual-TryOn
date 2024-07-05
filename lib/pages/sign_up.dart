@@ -145,6 +145,7 @@ class _SignUpState extends State<SignUp> {
                       ),
                     ),
                     Container(
+                      margin: EdgeInsets.fromLTRB(0, 0, 0, 40),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
                         color: Color(0x80DAEAF1),
@@ -157,7 +158,7 @@ class _SignUpState extends State<SignUp> {
                         ],
                       ),
                       child: Container(
-                        padding: EdgeInsets.fromLTRB(22, 31, 22, 31),
+                        padding: EdgeInsets.fromLTRB(22, 31, 22, 0),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.center,
@@ -317,7 +318,7 @@ class _SignUpState extends State<SignUp> {
                                         borderRadius: BorderRadius.circular(50),
                                       ),
                                       padding: EdgeInsets.symmetric(
-                                          horizontal: 50, vertical: 13),
+                                          horizontal: 70, vertical: 13),
                                     ),
                                     child: Text(
                                       'Sign Up',
@@ -329,7 +330,7 @@ class _SignUpState extends State<SignUp> {
                                       ),
                                     ),
                                   ),
-                                  SizedBox(height: 20),
+                                  SizedBox(height: 5),
                                   ElevatedButton.icon(
                                     onPressed: () {
                                       Navigator.pushNamed(
@@ -341,7 +342,7 @@ class _SignUpState extends State<SignUp> {
                                         borderRadius: BorderRadius.circular(50),
                                       ),
                                       padding: EdgeInsets.symmetric(
-                                          horizontal: 50, vertical: 7),
+                                          horizontal: 25, vertical: 7),
                                     ),
                                     icon: SvgPicture.asset(
                                       'assets/vectors/flat_color_iconsgoogle_1_x2.svg',
@@ -358,7 +359,7 @@ class _SignUpState extends State<SignUp> {
                                       ),
                                     ),
                                   ),
-                                  SizedBox(height: 20),
+                                  SizedBox(height: 5),
                                   TextButton(
                                     onPressed: () {
                                       Navigator.pushNamed(context, '/signin');
